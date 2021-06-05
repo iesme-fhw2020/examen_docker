@@ -1,12 +1,15 @@
 {
-  "name": "docker-complete",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "author": "Xavi Martinez / IES Maria Enriquez",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.17.1",
-    "body-parser": "1.19.0"
-  }
+    "name": "docker-complete",
+    "version": "1.0.0",
+    "description": "",
+    "main": "appExamen.js",
+    "author": "Xavi Martinez / IES Maria Enriquez",
+    "scripts": {
+        "start": "node appExamen.js"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "body-parser": "1.19.0"
+    }
 }

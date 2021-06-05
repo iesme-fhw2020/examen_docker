@@ -1,20 +1,21 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const text = 'Contraseña a indicar en la memoria del examen: ';
 
 const app = express();
 
 let userGoal = 'Sin objetivo';
 
 app.use(
-  bodyParser.urlencoded({
-    extended: false,
-  })
+    bodyParser.urlencoded({
+        extended: false,
+    })
 );
 
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.send(`
+    res.send(`
     <html>
       <head>
         <link rel="stylesheet" href="styles.css">
@@ -37,10 +38,11 @@ app.get('/', (req, res) => {
 });
 
 app.post('/store-goal', (req, res) => {
-  const enteredGoal = req.body.goal;
-  console.log(enteredGoal);
-  userGoal = enteredGoal;
-  res.redirect('/');
+    const enteredGoal = req.body.goal;
+    console.log(enteredGoal);
+    console.log(text + 'ASIX-2021');
+    userGoal = enteredGoal;
+    res.redirect('/');
 });
 
-app.listen(80);
+app.listen(3000);
